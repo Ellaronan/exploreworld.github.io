@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essential travel tips for your journey">
+    <title>Travel Tips</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #023e8a;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #0077b6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #023e8a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            background-color: #005f99;
+        }
+
+        .accordion {
+            background-color: #0077b6;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            transition: 0.4s;
+            width: 100%;
+        }
+
+        .accordion:hover {
+            background-color: #005f99;
+        }
+
+        .active, .accordion:hover {
+            background-color: #005f99;
+        }
+
+        .panel {
+            padding: 0 15px;
+            display: none;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
+
+        .panel ul {
+            margin: 10px 0;
+        }
+
+        .video-section {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Travel Tips</h1>
+        <a href="index.html" class="home-button">Home</a>
+    </header>
+ <nav>
+        <a href="destinations.html">Destinations</a>
+        <a href="contact.html">Contact</a>
+        <a href="traveltips.html" class="active">Travel Tips</a>
+    </nav>
+
+    <div class="video-section">
+        <h2>Expert Travel Tips</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1wnZZmATL-o?si=DJ_lsmggzeuqHxYy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <main>
+        <h2>Packing Tips</h2>
+        <button class="accordion">View Packing Tips</button>
+        <div class="panel">
+            <ul>
+                <li>Make a checklist of essentials before you start packing.</li>
+                <li>Roll your clothes to save space and avoid wrinkles.</li>
+                <li>Use packing cubes to keep your items organized.</li>
+            </ul>
+        </div>
+
+        <h2>Travel Safety</h2>
+        <button class="accordion">View Travel Safety Tips</button>
+        <div class="panel">
+            <ul>
+                <li>Keep copies of important documents like your passport and ID.</li>
+                <li>Inform someone you trust about your travel itinerary.</li>
+                <li>Be aware of your surroundings and trust your instincts.</li>
+            </ul>
+        </div>
+
+        <h2>Money-Saving Tips</h2>
+        <button class="accordion">View Money-Saving Tips</button>
+        <div class="panel">
+            <ul>
+                <li>Book flights and accommodations in advance for better deals.</li>
+                <li>Use public transportation or walk to explore the area.</li>
+                <li>Try local street food instead of eating at expensive restaurants.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dream Destinations. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const panel = button.nextElementSibling;
+
+                if (panel.style.display === 'block') {
+                    panel.style.display = 'none';
+                } else {
+                    panel.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+           
